@@ -1,6 +1,6 @@
 using System.Collections;
 
-namespace TwoSum_1;
+namespace TwoSum_1_Solution;
 
 public class TestData : IEnumerable
 {
