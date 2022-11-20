@@ -117,3 +117,8 @@ fabric.properties
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore,rider,visualstudiocode
 
 .idea/*
+
+*.user
+*.log
+*.csv
+*.html
