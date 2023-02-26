@@ -9,7 +9,7 @@ public class SolutionOne : ISolution<int, int>
 
     public int ClimbStairs(int n)
     {
-        if (n <= 2)
+        if (n < 3)
             return n;
         
         var tempFirst = 1;
