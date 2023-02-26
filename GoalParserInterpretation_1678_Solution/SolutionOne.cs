@@ -7,11 +7,11 @@ public class SolutionOne : ISolution<string, string>
     private const char Open = '(';
     private const char Close = ')';
 
-    public string Resolve(string argument)
+    public string Resolve(string parameter)
     {
-        if (argument.Length == 0)
+        if (parameter.Length == 0)
             return string.Empty;
-        var inputArray = argument.ToCharArray();
+        var inputArray = parameter.ToCharArray();
         var outputList  = new List<char>();
         for (var i = 0; i < inputArray.Length; i++)
         {
@@ -22,7 +22,7 @@ public class SolutionOne : ISolution<string, string>
             }
             else
             {
-                outputList.Add(argument[i]);
+                outputList.Add(parameter[i]);
             }
         }
 
