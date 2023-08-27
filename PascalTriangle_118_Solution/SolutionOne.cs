@@ -10,22 +10,24 @@ public class SolutionOne : ISolution<int, IList<IList<int>>>
     
     public IList<IList<int>> Generate(int numRows)
     {
-        var resultedList = new List<IList<int>>(){new List<int>(){1}};
-        for (int i = 1; i < 6; i++)
+        var items = new List<IList<int>> { new List<int> { 1 } };
+
+        while (items.Count != numRows)
         {
-            resultedList.Add(GetItem(resultedList[i-1]));
+            var item = GetItem(items[^1]);
+            items.Add(item);
         }
 
-        return resultedList;
+        return items;
 
         IList<int> GetItem(IList<int> beforeItem)
         {
-            var item = new List<int> { beforeItem[0] };
-            for (int i = 1; i < beforeItem.Count; i++)
+            var item = new List<int> { 1 };
+            for (int i = 0; i <= beforeItem.Count-2; i++)
             {
                 item.Add(beforeItem[i] + beforeItem[i+1]);
             }
-            item.Add(beforeItem.Count - 1);
+            item.Add(1);
             return item;
         }
     }
