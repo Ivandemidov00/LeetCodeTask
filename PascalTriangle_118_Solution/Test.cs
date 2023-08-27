@@ -14,7 +14,7 @@ public class Test
 
     private ISolution<int, IList<IList<int>>> _solutionOne = null!;
     
-    //[TestCaseSource(typeof(TestData), nameof(TestData.GetData))]
+    [TestCaseSource(typeof(TestData), nameof(TestData.GetData))]
     public IList<IList<int>> SolutionOneTest(int data)
         => _solutionOne.Resolve(data);                 
 }
