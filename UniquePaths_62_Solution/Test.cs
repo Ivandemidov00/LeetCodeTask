@@ -1,20 +1,19 @@
 using NUnit.Framework;
-
 using SolutionHelper;
 
-namespace PascalTriangle_118_Solution;
+namespace UniquePaths_62_Solution;
 
 public class Test
 {
     [OneTimeSetUp]
-    public void OneTimeSetUp()  
+    public void OneTimeSetUp()
     {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<int, IList<IList<int>>> _solutionOne = null!;
+    private ISolution<Parameters, int> _solutionOne = null!;
     
     [TestCaseSource(typeof(TestData), nameof(TestData.GetData))]
-    public IList<IList<int>> SolutionOneTest(int data)
+    public int SolutionOneTest(Parameters data)
         => _solutionOne.Resolve(data);                 
 }
