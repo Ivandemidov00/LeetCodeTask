@@ -1,7 +1,8 @@
 using NUnit.Framework;
+
 using SolutionHelper;
 
-namespace UniquePaths_62_Solution;
+namespace CountingBits_338_Solution;
 
 public class Test
 {
@@ -11,9 +12,9 @@ public class Test
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<Parameters, int> _solutionOne = null!;
+    private ISolution<int, int[]> _solutionOne = null!;
     
     [TestCaseSource(typeof(TestData), nameof(TestData.GetData))]
-    public int SolutionOneTest(Parameters data)
+    public int[] SolutionOneTest(int data)
         => _solutionOne.Resolve(data);                 
 }
