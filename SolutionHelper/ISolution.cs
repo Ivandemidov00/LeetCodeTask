@@ -1,6 +1,6 @@
 namespace SolutionHelper;
 /// <summary>
-/// Базовый класс решений
+/// Базовый интерфейс решений
 /// </summary>
 /// <typeparam name="TInput">Тип входящих параметров</typeparam>
 /// <typeparam name="TOutput">Тип ответа</typeparam>

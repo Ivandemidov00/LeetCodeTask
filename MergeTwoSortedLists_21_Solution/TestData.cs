@@ -13,7 +13,6 @@ public class TestData
             yield return new TestCaseData(new Parameters(new ListNode(), new ListNode(0))).Returns(new List<int>{0, 0});
             yield return new TestCaseData(new Parameters(new ListNode(), new ListNode())).Returns(new List<int>(){0, 0});
             yield return new TestCaseData(new Parameters(new ListNode(5), new ListNode(1,new ListNode(2,new ListNode(4))))).Returns(new List<int>(){1,2,4,5});
-
         }
     }
 }
