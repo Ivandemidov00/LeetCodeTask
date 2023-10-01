@@ -73,6 +73,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DivisorGame_1025", "Divisor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivisorGame_1025_Solution", "DivisorGame_1025_Solution\DivisorGame_1025_Solution.csproj", "{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MaximumDifferenceBetweenNodeAndAncetor_1026", "MaximumDifferenceBetweenNodeAndAncetor_1026", "{585EEA09-77BE-40FE-BF88-906B65464A97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximumDifferenceBetweenNodeAndAncetor_1026_Solution", "MaximumDifferenceBetweenNodeAndAncetor_1026_Solution\MaximumDifferenceBetweenNodeAndAncetor_1026_Solution.csproj", "{32870BCA-1B98-47C1-A15C-289620C90210}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +171,10 @@ Global
 		{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32870BCA-1B98-47C1-A15C-289620C90210}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32870BCA-1B98-47C1-A15C-289620C90210}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32870BCA-1B98-47C1-A15C-289620C90210}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32870BCA-1B98-47C1-A15C-289620C90210}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{187F0F30-5E1C-43D1-80BA-9C27D6D93680} = {FAD51B0A-B936-4F76-9C48-506DE7CC7062}
@@ -190,5 +198,6 @@ Global
 		{05E4BD76-0E21-4E3B-AA16-E5D2A1A7B9FF} = {AE83C088-BD06-464C-934D-02D569B886EF}
 		{9F5D71C9-FF86-4263-995E-39F8EDAA093D} = {176F94D9-8877-403A-8B8B-EEB3781252B6}
 		{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F} = {2312E3D2-909F-4908-BB69-04579B831B41}
+		{32870BCA-1B98-47C1-A15C-289620C90210} = {585EEA09-77BE-40FE-BF88-906B65464A97}
 	EndGlobalSection
 EndGlobal
