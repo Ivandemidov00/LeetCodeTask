@@ -1,4 +1,4 @@
-namespace MergeTwoSortedLists_21_Solution;
+namespace SolutionHelper;
 
 public class ListNode
 {
