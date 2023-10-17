@@ -10,7 +10,6 @@ public class SolutionOne : ISolution<ListNode, bool>
 
     public bool HasCycle(ListNode head)
     {
-        head.
         return false;
     }
 }

@@ -11,7 +11,15 @@ public class SolutionOne : ISolution<Parameters, int>
 
     public int ArithmeticTriplets(int[] nums, int diff)
     {
-        nums.ha()
-        return 2;
-    }   
+        var count = 0;
+        var numsQueue = new Queue<int>(nums);
+        while (numsQueue.TryDequeue(out var num))
+        {
+            if (numsQueue.Contains(num + diff) &&
+                numsQueue.Contains(num + diff * 2))
+                count++;
+        }
+        GC.Collect();
+        return count;
+    }
 }
