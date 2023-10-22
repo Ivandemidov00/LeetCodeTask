@@ -6,8 +6,8 @@ namespace NumberOfArithmeticTriplets_2367_Solution;
 
 public class SolutionOne : ISolution<Parameters, int>
 {
-    public int Resolve(Parameters parameter)
-        => ArithmeticTriplets(parameter.Nums, parameter.Diff);
+    public int Resolve(Parameters parameters)
+        => ArithmeticTriplets(parameters.Nums, parameters.Diff);
 
     public int ArithmeticTriplets(int[] nums, int diff)
     {

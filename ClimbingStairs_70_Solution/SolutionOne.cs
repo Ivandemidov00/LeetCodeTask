@@ -4,8 +4,8 @@ namespace ClimbingStairs_70_Solution;
 
 public class SolutionOne : ISolution<int, int>
 {
-    public int Resolve(int parameter)
-        => ClimbStairs(parameter);
+    public int Resolve(int parameters)
+        => ClimbStairs(parameters);
 
     public int ClimbStairs(int n)
     {

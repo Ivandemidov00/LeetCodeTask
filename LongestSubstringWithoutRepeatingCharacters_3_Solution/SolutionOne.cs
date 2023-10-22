@@ -35,12 +35,12 @@ public class SolutionOne : ISolution<string, int>
     }
     */
 
-    public int Resolve(string parameter)
-        => parameter.Length switch
+    public int Resolve(string parameters)
+        => parameters.Length switch
         {
             0 => 0,
             1 => 1,
-            _ => CalcMaxNonRepeatingSubString(parameter.ToCharArray(), new LinkedList(), 0)
+            _ => CalcMaxNonRepeatingSubString(parameters.ToCharArray(), new LinkedList(), 0)
         };
     private static int CalcMaxNonRepeatingSubString(char[] charArray, LinkedList bufferMarksList, int maxNonRepeatingSubString){
         var currentNonRepeatingSubStrMaxLength = 0;

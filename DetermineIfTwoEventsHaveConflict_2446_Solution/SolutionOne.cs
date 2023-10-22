@@ -4,8 +4,8 @@ namespace DetermineIfTwoEventsHaveConflict_2446_Solution;
 
 public class SolutionOne : ISolution<Parameters, bool>
 {
-    public bool Resolve(Parameters parameter)
-        => HaveConflict(parameter.event1, parameter.event2);
+    public bool Resolve(Parameters parameters)
+        => HaveConflict(parameters.event1, parameters.event2);
     
     // ReSharper disable once MemberCanBePrivate.Global
     public bool HaveConflict(string[] event1, string[] event2)

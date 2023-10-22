@@ -5,8 +5,8 @@ namespace PascalTriangle_118_Solution;
 
 public class SolutionOne : ISolution<int, IList<IList<int>>>
 {
-    public IList<IList<int>> Resolve(int parameter)
-        => Generate(parameter);
+    public IList<IList<int>> Resolve(int parameters)
+        => Generate(parameters);
     
     public IList<IList<int>> Generate(int numRows)
     {

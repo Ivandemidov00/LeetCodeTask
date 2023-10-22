@@ -93,6 +93,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NumberOfArithmeticTriplets_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberOfArithmeticTriplets_2367_Solution", "NumberOfArithmeticTriplets_2367_Solution\NumberOfArithmeticTriplets_2367_Solution.csproj", "{078BDAA3-855A-4EA8-B904-818B898B9CE1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree_1379", "FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree_1379", "{49FDE763-09B5-4A4F-946E-998F398A70E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree_1379_Solution", "FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree_1379_Solution\FindACorrespondingNodeOfABinaryTreeInACloneOfThatTree_1379_Solution.csproj", "{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -207,6 +211,10 @@ Global
 		{078BDAA3-855A-4EA8-B904-818B898B9CE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{078BDAA3-855A-4EA8-B904-818B898B9CE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{078BDAA3-855A-4EA8-B904-818B898B9CE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{187F0F30-5E1C-43D1-80BA-9C27D6D93680} = {FAD51B0A-B936-4F76-9C48-506DE7CC7062}
@@ -235,5 +243,6 @@ Global
 		{6F7023C8-83B2-44FA-B0CA-DB096EB697F4} = {0DF8F64F-4249-4211-97F2-820E597C932A}
 		{3680EEFA-2751-4646-9795-89AF0767A521} = {7B35DFC9-AA64-441D-B70C-71A905FFECAB}
 		{078BDAA3-855A-4EA8-B904-818B898B9CE1} = {84580C71-FA02-4BBD-B123-A33922DB9856}
+		{FFD6CBBA-3503-4477-B6D3-2957F56F5FD1} = {49FDE763-09B5-4A4F-946E-998F398A70E0}
 	EndGlobalSection
 EndGlobal

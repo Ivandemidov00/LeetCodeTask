@@ -7,8 +7,8 @@ namespace ConvertBinaryNumberInALinkedListToInteger_1290_Solution;
 
 public class SolutionOne : ISolution<ListNode,int>
 {
-    public int Resolve(ListNode parameter)
-        => GetDecimalValue(parameter);
+    public int Resolve(ListNode parameters)
+        => GetDecimalValue(parameters);
 
     public int GetDecimalValue(ListNode h)
     {

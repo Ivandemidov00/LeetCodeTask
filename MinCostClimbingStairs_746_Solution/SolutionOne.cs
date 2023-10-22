@@ -5,8 +5,8 @@ namespace MinCostClimbingStairs_746_Solution;
 
 public class SolutionOne : ISolution<int[], int>
 {
-    public int Resolve(int[] parameter)
-        => MinCostClimbingStairs(parameter);
+    public int Resolve(int[] parameters)
+        => MinCostClimbingStairs(parameters);
 
     public int MinCostClimbingStairs(int[] cost)
         => Math.Min(GoToStairs(cost.Length - 1, cost), GoToStairs(cost.Length - 2, cost));
