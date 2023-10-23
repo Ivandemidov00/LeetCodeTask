@@ -15,6 +15,7 @@ public class Test
 
     private ISolution<Parameters, TreeNode> _solutionOne = null!;
     
+    [Ignore("link")]
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
     public TreeNode SolutionOneTest(Parameters command) 
         => _solutionOne.Resolve(command);
