@@ -12,10 +12,14 @@ public class SolutionOne : ISolution<Parameters, int>
     {
         if(root == null)
             return 0;
-        if(root.val >= low && root.val <= high)
-            return root.val + RangeSumBST(root.left, low, high) + RangeSumBST(root.right, low, high);
-        if(root.val < low && root.val <= high)
-            return RangeSumBST(root.right, low, high);
-        return RangeSumBST(root.left, low, high);
+
+        return root.val switch
+        {
+            var value when value >= low && value > high => RangeSumBST(root.left, low, high),
+            var value when value < low && value <= high => RangeSumBST(root.right, low, high),
+            var value => value
+                         + RangeSumBST(root.left, low, high)
+                         + RangeSumBST(root.right, low, high)
+        };
     }
 }
