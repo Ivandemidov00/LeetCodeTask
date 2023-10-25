@@ -12,4 +12,11 @@ public class TreeNode
         this.left = left;
         this.right = right;
     }
+
+    public override bool Equals(object? obj)
+    {
+        if(obj is TreeNode treeNode)
+            return val == treeNode.val;
+        return base.Equals(obj);
+    }
 }
