@@ -10,9 +10,9 @@ public class SolutionOne : ISolution<Parameter, int[][]>
     private static readonly ValueTuple<sbyte, sbyte> Three = (0,1);
     private static readonly ValueTuple<sbyte, sbyte> Four = (-1,0);
 
-    public int[][] Resolve(Parameter parameter)
+    public int[][] Resolve(Parameter parameters)
     {
-        return FloodFill(parameter.Image, parameter.Sc, parameter.Sc, parameter.Color);
+        return FloodFill(parameters.Image, parameters.Sc, parameters.Sc, parameters.Color);
         int[][] FloodFill(int[][] image, int sr, int sc, int color)
         {
             if (color == image[sr][sc])

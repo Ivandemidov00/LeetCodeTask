@@ -5,8 +5,8 @@ namespace MaximumDifferenceBetweenNodeAndAncetor_1026_Solution;
 
 public class SolutionOne : ISolution<TreeNode,int>
 {
-    public int Resolve(TreeNode parameter)
-        => MaxAncestorDiff(parameter);
+    public int Resolve(TreeNode parameters)
+        => MaxAncestorDiff(parameters);
 
     public int MaxAncestorDiff(TreeNode root)
         => Math.Max(MaxMin(root.left, 0, root.val, root.val), MaxMin(root.right, 0, root.val, root.val));

@@ -6,5 +6,5 @@ namespace SolutionHelper;
 /// <typeparam name="TOutput">Тип ответа</typeparam>
 public interface ISolution<in TInput, out TOutput>
 {
-    public TOutput Resolve(TInput parameter);
+    public TOutput Resolve(TInput parameters);
 }

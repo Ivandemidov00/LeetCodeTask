@@ -5,8 +5,8 @@ namespace IntegerToRoman_12_Solution;
 
 public class SolutionOne : ISolution<int,string>
 {
-    public string Resolve(int parameter)
-        => IntToRoman(parameter);
+    public string Resolve(int parameters)
+        => IntToRoman(parameters);
 
     public string IntToRoman(int num)
         => num switch

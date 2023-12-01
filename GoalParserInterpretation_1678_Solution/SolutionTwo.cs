@@ -7,21 +7,21 @@ public class SolutionTwo : ISolution<string, string>
     private const char Open = '(';
     private const char Close = ')';
 
-    public string Resolve(string parameter)
+    public string Resolve(string parameters)
     {
-        if (parameter.Length == 0)
+        if (parameters.Length == 0)
             return string.Empty;
-        var outputList  = new List<char>(parameter.Length - 1);
-        for (var i = 0; i < parameter.Length; i++)
+        var outputList  = new List<char>(parameters.Length - 1);
+        for (var i = 0; i < parameters.Length; i++)
         {
-            if (parameter[i] == Open)
+            if (parameters[i] == Open)
             {
                 i++;
-                i = FindClose(i, parameter, outputList);
+                i = FindClose(i, parameters, outputList);
             }
             else
             {
-                outputList.Add(parameter[i]);
+                outputList.Add(parameters[i]);
             }
         }
 

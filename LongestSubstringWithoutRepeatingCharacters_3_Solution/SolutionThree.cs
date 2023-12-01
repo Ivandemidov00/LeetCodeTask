@@ -5,12 +5,12 @@ namespace LongestSubstringWithoutRepeatingCharacters_3_Solution;
 
 public class SolutionThree : ISolution<string, int>
 {
-    public int Resolve(string parameter)
-        => parameter.Length switch
+    public int Resolve(string parameters)
+        => parameters.Length switch
         {
             0 => 0,
             1 => 1,
-            _ => CalcMaxNonRepeatingSubString(parameter.ToCharArray(), new LinkedListThree())
+            _ => CalcMaxNonRepeatingSubString(parameters.ToCharArray(), new LinkedListThree())
         };
     private static int CalcMaxNonRepeatingSubString(IReadOnlyList<char> charArray, LinkedListThree bufferMarks, int maxNonRepeatingSubString = 0, int iterationStart = 0){
         var currentNonRepeatingSubStrMaxLength = 0;

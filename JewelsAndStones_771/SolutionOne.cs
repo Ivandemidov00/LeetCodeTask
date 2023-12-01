@@ -5,8 +5,8 @@ namespace JewelsAndStones_771;
 
 public class SolutionOne : ISolution<Parameters,int>
 {
-    public int Resolve(Parameters parameter)
-        => NumJewelsInStones(parameter.Jewels, parameter.Stones);
+    public int Resolve(Parameters parameters)
+        => NumJewelsInStones(parameters.Jewels, parameters.Stones);
     
     public int NumJewelsInStones(string jewels, string stones)
     {

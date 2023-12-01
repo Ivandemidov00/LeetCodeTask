@@ -1,3 +1,5 @@
+using SolutionHelper;
+
 namespace MergeTwoSortedLists_21_Solution;
 
 public static class ListNodeExtension

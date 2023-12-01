@@ -4,8 +4,8 @@ namespace MergeTwoSortedLists_21_Solution;
 
 public class SolutionOne : ISolution<Parameters, ListNode>
 {
-    public ListNode Resolve(Parameters parameter)
-        => MergeTwoLists(parameter.List1, parameter.List2);
+    public ListNode Resolve(Parameters parameters)
+        => MergeTwoLists(parameters.List1, parameters.List2);
     
     public ListNode MergeTwoLists(ListNode list1, ListNode list2)
     {

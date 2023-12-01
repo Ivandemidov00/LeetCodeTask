@@ -4,8 +4,8 @@ namespace SameTree_100_Solution;
 
 public class SolutionOne : ISolution<Parameters, bool>
 {
-    public bool Resolve(Parameters parameter)
-        => IsSameTree(parameter.p, parameter.q);
+    public bool Resolve(Parameters parameters)
+        => IsSameTree(parameters.p, parameters.q);
     public bool IsSameTree(TreeNode p, TreeNode q)
     {
         if (Equals(p,null) || Equals(q,null))
