@@ -81,6 +81,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MinCostClimbingStairs_746",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinCostClimbingStairs_746_Solution", "MinCostClimbingStairs_746_Solution\MinCostClimbingStairs_746_Solution.csproj", "{EA907FCD-A492-423E-9443-979E89716010}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EvaluateReversePolishNotation_150", "EvaluateReversePolishNotation_150", "{543C7C78-E4EF-4EBD-AB27-44FEC3613E58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluateReversePolishNotation_150_Solution", "EvaluateReversePolishNotation_150_Solution\EvaluateReversePolishNotation_150_Solution.csproj", "{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +187,10 @@ Global
 		{EA907FCD-A492-423E-9443-979E89716010}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA907FCD-A492-423E-9443-979E89716010}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA907FCD-A492-423E-9443-979E89716010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{187F0F30-5E1C-43D1-80BA-9C27D6D93680} = {FAD51B0A-B936-4F76-9C48-506DE7CC7062}
@@ -208,5 +216,6 @@ Global
 		{446B0EFB-5B8E-4FF4-BCAA-E2C85450EA5F} = {2312E3D2-909F-4908-BB69-04579B831B41}
 		{32870BCA-1B98-47C1-A15C-289620C90210} = {585EEA09-77BE-40FE-BF88-906B65464A97}
 		{EA907FCD-A492-423E-9443-979E89716010} = {8D2A8958-49E1-4377-BCCD-DE2F392B6F2B}
+		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6} = {543C7C78-E4EF-4EBD-AB27-44FEC3613E58}
 	EndGlobalSection
 EndGlobal
