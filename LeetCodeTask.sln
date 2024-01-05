@@ -117,6 +117,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EvaluateReversePolishNotati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluateReversePolishNotation_150_Solution", "EvaluateReversePolishNotation_150_Solution\EvaluateReversePolishNotation_150_Solution.csproj", "{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FinalValueOfVariableAfterPerformingOperations_2011", "FinalValueOfVariableAfterPerformingOperations_2011", "{E0E7E90F-AECE-4048-A8CE-E9215A3970EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalValueOfVariableAfterPerformingOperations_2011_Solution", "FinalValueOfVariableAfterPerformingOperations_2011_Solution\FinalValueOfVariableAfterPerformingOperations_2011_Solution.csproj", "{B648AFC3-45FF-4196-A7D4-6EA49C57288E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalValueOfVariableAfterPerformingOperations_2011_Benchmark", "FinalValueOfVariableAfterPerformingOperations_2011_Benchmark\FinalValueOfVariableAfterPerformingOperations_2011_Benchmark.csproj", "{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +261,14 @@ Global
 		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B648AFC3-45FF-4196-A7D4-6EA49C57288E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B648AFC3-45FF-4196-A7D4-6EA49C57288E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B648AFC3-45FF-4196-A7D4-6EA49C57288E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B648AFC3-45FF-4196-A7D4-6EA49C57288E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{187F0F30-5E1C-43D1-80BA-9C27D6D93680} = {FAD51B0A-B936-4F76-9C48-506DE7CC7062}
@@ -289,5 +303,7 @@ Global
 		{C6D59217-35D3-4656-AD48-3004C2C1CC96} = {E649D060-697D-4FF8-8FE0-F95C2A2EB292}
 		{4609057A-92C6-429E-8FBF-C08809F5D60F} = {7D5D6C1C-D06A-4D79-9C66-9F3E0C546E77}
 		{89DBDDF1-A541-4729-98C6-15FCAB23FAD6} = {543C7C78-E4EF-4EBD-AB27-44FEC3613E58}
+		{B648AFC3-45FF-4196-A7D4-6EA49C57288E} = {E0E7E90F-AECE-4048-A8CE-E9215A3970EB}
+		{3673EF5D-A6EC-4A6C-ADD7-EFBDC2D8F509} = {E0E7E90F-AECE-4048-A8CE-E9215A3970EB}
 	EndGlobalSection
 EndGlobal
