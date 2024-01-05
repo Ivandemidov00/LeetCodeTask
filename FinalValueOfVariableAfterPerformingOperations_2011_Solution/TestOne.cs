@@ -9,7 +9,7 @@ public class TestOne
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
-        _solutionOne = new SolutionOne();
+        _solutionOne = new SolutionThree();
     }
 
     private ISolution<Parameters, int> _solutionOne = null!;
