@@ -1,6 +1,4 @@
-using SolutionHelper;
-
-namespace MergeTwoSortedLists_21_Solution;
+namespace SolutionHelper;
 
 public static class ListNodeExtension
 {
