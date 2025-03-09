@@ -1,4 +1,5 @@
 using System.Collections;
+
 using NUnit.Framework;
 
 namespace GoalParserInterpretation_1678_Solution;
@@ -14,6 +15,5 @@ public static class TestData
             yield return new TestCaseData("G()o").Returns("Goo");
             yield return new TestCaseData("G(o)o").Returns("Goo");
         }
-        
     }
 }

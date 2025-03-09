@@ -1,4 +1,5 @@
 ﻿using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace MiddleOfTheLinkedList_876_Solution;
@@ -6,7 +7,9 @@ namespace MiddleOfTheLinkedList_876_Solution;
 public class SolutionOne : ISolution<Parameters, ListNode>
 {
     public ListNode Resolve(Parameters parameters)
-        => MiddleNode(parameters.Head);
+    {
+        return MiddleNode(parameters.Head);
+    }
 
     public ListNode MiddleNode(ListNode head)
     {
@@ -16,7 +19,7 @@ public class SolutionOne : ISolution<Parameters, ListNode>
         }
 
         ListNode[] nodes = new ListNode[100];
-        var iterator = 1;
+        int iterator = 1;
 
         while (head.next != null)
         {
@@ -25,7 +28,7 @@ public class SolutionOne : ISolution<Parameters, ListNode>
             head = head.next;
         }
 
-        var middleNodeIter = (iterator / 2) + 1;
+        int middleNodeIter = (iterator / 2) + 1;
 
         return nodes[middleNodeIter];
     }

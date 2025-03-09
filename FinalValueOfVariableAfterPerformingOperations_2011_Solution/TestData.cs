@@ -10,8 +10,8 @@ public class TestData
     {
         get
         {
-            yield return new TestCaseData(new Parameters(new[]{"--X","X++","X++"})).Returns(1);
-            yield return new TestCaseData(new Parameters(new[]{"++X","++X","X++"})).Returns(3);
+            yield return new TestCaseData(new Parameters(new[] { "--X", "X++", "X++" })).Returns(1);
+            yield return new TestCaseData(new Parameters(new[] { "++X", "++X", "X++" })).Returns(3);
         }
     }
 }

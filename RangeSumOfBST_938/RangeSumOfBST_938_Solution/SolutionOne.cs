@@ -1,4 +1,5 @@
 using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace RangeSumOfBST_938_Solution;
@@ -6,12 +7,16 @@ namespace RangeSumOfBST_938_Solution;
 public class SolutionOne : ISolution<Parameters, int>
 {
     public int Resolve(Parameters parameters)
-        => RangeSumBST(parameters.Root, parameters.Low, parameters.High);
+    {
+        return RangeSumBST(parameters.Root, parameters.Low, parameters.High);
+    }
 
     public int RangeSumBST(TreeNode root, int low, int high)
     {
-        if(root == null)
+        if (root == null)
+        {
             return 0;
+        }
 
         return root.val switch
         {

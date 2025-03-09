@@ -9,11 +9,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TwoSum_1_Solution\TwoSum_1_Solution.csproj" />
+        <ProjectReference Include="..\TwoSum_1_Solution\TwoSum_1_Solution.csproj"/>
     </ItemGroup>
 
 </Project>

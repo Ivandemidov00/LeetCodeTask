@@ -8,11 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\MergeTwoSortedLists_21_Solution\MergeTwoSortedLists_21_Solution.csproj" />
+        <ProjectReference Include="..\MergeTwoSortedLists_21_Solution\MergeTwoSortedLists_21_Solution.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2"/>
     </ItemGroup>
 
 </Project>

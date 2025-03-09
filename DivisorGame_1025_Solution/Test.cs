@@ -6,15 +6,17 @@ namespace DivisorGame_1025_Solution;
 
 public class Test
 {
+    private ISolution<int, bool> _solutionOne = null!;
+
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<int, bool> _solutionOne = null!;
-
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
     public bool SolutionOneTest(int num)
-        => _solutionOne.Resolve(num);
+    {
+        return _solutionOne.Resolve(num);
+    }
 }

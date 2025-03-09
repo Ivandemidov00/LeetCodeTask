@@ -1,4 +1,5 @@
 using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace SingleNumber136_Solution;
@@ -6,12 +7,14 @@ namespace SingleNumber136_Solution;
 public class SolutionOne : ISolution<int[], int>
 {
     public int Resolve(int[] parameters)
-        => SingleNumber(parameters);
+    {
+        return SingleNumber(parameters);
+    }
 
     public int SingleNumber(int[] nums)
     {
-        var singleNums = new HashSet<int>();
-        foreach (var num in nums)
+        HashSet<int>? singleNums = new();
+        foreach (int num in nums)
         {
             if (singleNums.Contains(num))
             {

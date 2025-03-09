@@ -1,4 +1,5 @@
 ﻿using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace FinalValueOfVariableAfterPerformingOperations_2011_Solution;
@@ -6,14 +7,16 @@ namespace FinalValueOfVariableAfterPerformingOperations_2011_Solution;
 public class SolutionOne : ISolution<Parameters, int>
 {
     public int Resolve(Parameters parameters)
-        => FinalValueAfterOperations(parameters.Operations);
+    {
+        return FinalValueAfterOperations(parameters.Operations);
+    }
 
     public int FinalValueAfterOperations(string[] operations)
     {
-        var sum = 0;
-        foreach (var operation in operations)
+        int sum = 0;
+        foreach (string? operation in operations)
         {
-            var operationValue = operation switch
+            int operationValue = operation switch
             {
                 "--X" => -1,
                 "X--" => -1,
@@ -23,6 +26,7 @@ public class SolutionOne : ISolution<Parameters, int>
             };
             sum += operationValue;
         }
+
         return sum;
     }
 }

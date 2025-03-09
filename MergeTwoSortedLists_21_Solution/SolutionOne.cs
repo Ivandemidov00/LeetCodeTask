@@ -5,14 +5,23 @@ namespace MergeTwoSortedLists_21_Solution;
 public class SolutionOne : ISolution<Parameters, ListNode>
 {
     public ListNode Resolve(Parameters parameters)
-        => MergeTwoLists(parameters.List1, parameters.List2);
-    
+    {
+        return MergeTwoLists(parameters.List1, parameters.List2);
+    }
+
     public ListNode MergeTwoLists(ListNode list1, ListNode list2)
     {
         if (list1 == null! && list2 == null!)
+        {
             return null!;
-        if (list1 == null || list2 == null!) return list1 == null ? list2! : list1!;
-        ListNode resultTemp = new ListNode(); 
+        }
+
+        if (list1 == null || list2 == null!)
+        {
+            return list1 == null ? list2! : list1!;
+        }
+
+        ListNode resultTemp = new();
         ListNode result = resultTemp;
         do
         {
@@ -20,13 +29,11 @@ public class SolutionOne : ISolution<Parameters, ListNode>
             {
                 resultTemp.next = new ListNode(list1.val);
                 list1 = list1.next!;
-
             }
             else
             {
-                resultTemp.next= new ListNode(list2.val);
+                resultTemp.next = new ListNode(list2.val);
                 list2 = list2.next!;
-
             }
 
             resultTemp = resultTemp.next!;
@@ -42,8 +49,10 @@ public class SolutionOne : ISolution<Parameters, ListNode>
         }
 
         if (list2 == null)
+        {
             resultTemp.next = list1!;
+        }
+
         return result.next!;
     }
-
 }

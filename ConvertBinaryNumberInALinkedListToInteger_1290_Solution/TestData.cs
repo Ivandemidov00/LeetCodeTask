@@ -1,7 +1,5 @@
 using System.Collections;
 
-using MergeTwoSortedLists_21_Solution;
-
 using NUnit.Framework;
 
 using SolutionHelper;
@@ -14,8 +12,22 @@ public static class TestData
     {
         get
         {
-            yield return new TestCaseData(new ListNode(1, new ListNode(0 , new ListNode(1)))).Returns(5);
-            yield return new TestCaseData(new ListNode(1, new ListNode(0 , new ListNode(0, new ListNode(1, new ListNode(0, new ListNode(0, new ListNode(1, new ListNode(1, new ListNode(1,new ListNode(0, new ListNode(0,new ListNode(0, new ListNode(0, new ListNode(0, new ListNode(0)))))))))))))))).Returns(18880);
+            yield return new TestCaseData(new ListNode(1, new ListNode(0, new ListNode(1)))).Returns(5);
+            yield return new TestCaseData(new ListNode(1,
+                    new ListNode(0,
+                        new ListNode(0,
+                            new ListNode(1,
+                                new ListNode(0,
+                                    new ListNode(0,
+                                        new ListNode(1,
+                                            new ListNode(1,
+                                                new ListNode(1,
+                                                    new ListNode(0,
+                                                        new ListNode(0,
+                                                            new ListNode(0,
+                                                                new ListNode(0,
+                                                                    new ListNode(0, new ListNode())))))))))))))))
+                .Returns(18880);
         }
     }
 }

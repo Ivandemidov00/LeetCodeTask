@@ -1,15 +1,19 @@
 using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace IntegerToRoman_12_Solution;
 
-public class SolutionOne : ISolution<int,string>
+public class SolutionOne : ISolution<int, string>
 {
     public string Resolve(int parameters)
-        => IntToRoman(parameters);
+    {
+        return IntToRoman(parameters);
+    }
 
     public string IntToRoman(int num)
-        => num switch
+    {
+        return num switch
         {
             >= 1000 => "M" + IntToRoman(num - 1000),
             >= 500 => num >= 900 ? ("CM" + IntToRoman(num - 900)) : ("D" + IntToRoman(num - 500)),
@@ -20,4 +24,5 @@ public class SolutionOne : ISolution<int,string>
             > 0 => num == 4 ? "IV" : "I" + IntToRoman(num - 1),
             _ => ""
         };
+    }
 }

@@ -6,15 +6,17 @@ namespace MergeTwoBinaryTrees_617_Solution;
 
 public class Test
 {
+    private ISolution<Parameters, TreeNode> _solutionOne = null!;
+
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<Parameters, TreeNode> _solutionOne = null!;
-    
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
-    public TreeNode SolutionOneTest(Parameters parameters) 
-        => _solutionOne.Resolve(parameters);
+    public TreeNode SolutionOneTest(Parameters parameters)
+    {
+        return _solutionOne.Resolve(parameters);
+    }
 }

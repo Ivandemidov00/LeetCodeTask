@@ -8,12 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\GoalParserInterpretation_1678_Solution\GoalParserInterpretation_1678_Solution.csproj" />
-      <ProjectReference Include="..\SolutionHelper\SolutionHelper.csproj" />
+        <ProjectReference Include="..\GoalParserInterpretation_1678_Solution\GoalParserInterpretation_1678_Solution.csproj"/>
+        <ProjectReference Include="..\SolutionHelper\SolutionHelper.csproj"/>
     </ItemGroup>
 
 </Project>

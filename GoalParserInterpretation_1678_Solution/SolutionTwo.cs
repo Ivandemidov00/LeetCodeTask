@@ -10,9 +10,12 @@ public class SolutionTwo : ISolution<string, string>
     public string Resolve(string parameters)
     {
         if (parameters.Length == 0)
+        {
             return string.Empty;
-        var outputList  = new List<char>(parameters.Length - 1);
-        for (var i = 0; i < parameters.Length; i++)
+        }
+
+        List<char>? outputList = new(parameters.Length - 1);
+        for (int i = 0; i < parameters.Length; i++)
         {
             if (parameters[i] == Open)
             {
@@ -29,7 +32,7 @@ public class SolutionTwo : ISolution<string, string>
 
         static int FindClose(int iterator, string inputAnswer, ICollection<char> outputList)
         {
-            if (inputAnswer[iterator-1] == Open && inputAnswer[iterator] == Close)
+            if (inputAnswer[iterator - 1] == Open && inputAnswer[iterator] == Close)
             {
                 outputList.Add('o');
                 return iterator;
@@ -39,11 +42,10 @@ public class SolutionTwo : ISolution<string, string>
             {
                 return iterator;
             }
+
             outputList.Add(inputAnswer[iterator]);
             iterator++;
             return FindClose(iterator, inputAnswer, outputList);
         }
-
     }
-    
 }

@@ -6,15 +6,17 @@ namespace PowerOfFour_342_Solution;
 
 public class Test
 {
+    private ISolution<int, bool> _solutionOne = null!;
+
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<int, bool> _solutionOne = null!;
-
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
     public bool SolutionOneTest(int parameters)
-        => _solutionOne.Resolve(parameters);
+    {
+        return _solutionOne.Resolve(parameters);
+    }
 }

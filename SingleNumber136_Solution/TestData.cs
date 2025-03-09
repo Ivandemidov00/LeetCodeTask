@@ -10,9 +10,9 @@ public class TestData
     {
         get
         {
-            yield return new TestCaseData(new []{4,1,2,1,2})
+            yield return new TestCaseData(new[] { 4, 1, 2, 1, 2 })
                 .Returns(4);
-            yield return new TestCaseData(new []{2,2,1})
+            yield return new TestCaseData(new[] { 2, 2, 1 })
                 .Returns(1);
         }
     }

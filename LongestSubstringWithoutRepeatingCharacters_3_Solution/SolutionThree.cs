@@ -1,4 +1,5 @@
 using System.Collections;
+
 using SolutionHelper;
 
 namespace LongestSubstringWithoutRepeatingCharacters_3_Solution;
@@ -6,31 +7,37 @@ namespace LongestSubstringWithoutRepeatingCharacters_3_Solution;
 public class SolutionThree : ISolution<string, int>
 {
     public int Resolve(string parameters)
-        => parameters.Length switch
+    {
+        return parameters.Length switch
         {
             0 => 0,
             1 => 1,
             _ => CalcMaxNonRepeatingSubString(parameters.ToCharArray(), new LinkedListThree())
         };
-    private static int CalcMaxNonRepeatingSubString(IReadOnlyList<char> charArray, LinkedListThree bufferMarks, int maxNonRepeatingSubString = 0, int iterationStart = 0){
-        var currentNonRepeatingSubStrMaxLength = 0;
-        var currentNonRepeatingSubStrBufferMaxLength = 0;
-        for (var i = iterationStart; i < charArray.Count; i++)
+    }
+
+    private static int CalcMaxNonRepeatingSubString(IReadOnlyList<char> charArray, LinkedListThree bufferMarks,
+        int maxNonRepeatingSubString = 0, int iterationStart = 0)
+    {
+        int currentNonRepeatingSubStrMaxLength = 0;
+        int currentNonRepeatingSubStrBufferMaxLength = 0;
+        for (int i = iterationStart; i < charArray.Count; i++)
         {
-            if (!bufferMarks.TryGetLengthAfterNode(charArray[i], out var node))
+            if (!bufferMarks.TryGetLengthAfterNode(charArray[i], out int node))
             {
                 bufferMarks.Add(charArray[i], out currentNonRepeatingSubStrBufferMaxLength);
                 currentNonRepeatingSubStrMaxLength++;
             }
             else
-            { 
+            {
                 bufferMarks.ChangeHead(node);
-                var maxNonRepeatingSubStringBeforeRecursiveCalc = CalcMaxNonRepeatingSubString(charArray, bufferMarks, maxNonRepeatingSubString, currentNonRepeatingSubStrMaxLength + iterationStart);
+                int maxNonRepeatingSubStringBeforeRecursiveCalc = CalcMaxNonRepeatingSubString(charArray, bufferMarks,
+                    maxNonRepeatingSubString, currentNonRepeatingSubStrMaxLength + iterationStart);
                 return ChoseMaxNonRepeatingSubString(currentNonRepeatingSubStrMaxLength,
                     currentNonRepeatingSubStrBufferMaxLength, maxNonRepeatingSubStringBeforeRecursiveCalc);
             }
         }
-        
+
         return ChoseMaxNonRepeatingSubString(currentNonRepeatingSubStrMaxLength,
             currentNonRepeatingSubStrBufferMaxLength, maxNonRepeatingSubString);
     }
@@ -53,22 +60,29 @@ public class SolutionThree : ISolution<string, int>
 
     private sealed class LinkedListThree : IEnumerable<char>
     {
-        internal sealed class Node
-        {
-            public Node(char data)
-                => Data = data;
-            public char Data { get; set; }
-            public Node? NextNode { get; set; } = null;
-        };
-        
         private Node? _head;
-        private Node? _tail;
         private int _length;
+        private Node? _tail;
+
+        public IEnumerator<char> GetEnumerator()
+        {
+            Node? current = _head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.NextNode;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
 
 
         public void Add(char data, out int currentLengthWithoutRepeat)
         {
-            var node = new Node(data);
+            Node node = new(data);
             if (_head == null)
             {
                 _head = node;
@@ -91,8 +105,8 @@ public class SolutionThree : ISolution<string, int>
 
         public bool TryGetLengthAfterNode(char data, out int currentMaxNonRepeatingLenght)
         {
-            var current = _head;
-            var lengthBeforeRepeat = 0;
+            Node? current = _head;
+            int lengthBeforeRepeat = 0;
             currentMaxNonRepeatingLenght = 0;
             while (current != null)
             {
@@ -103,23 +117,22 @@ public class SolutionThree : ISolution<string, int>
                     currentMaxNonRepeatingLenght = _length - lengthBeforeRepeat;
                     return true;
                 }
+
                 current = current.NextNode;
             }
+
             return false;
         }
-        public IEnumerator<char> GetEnumerator()
-        {
-            var current = _head;
-            while (current != null)
-            {
-                yield return current.Data;
-                current = current.NextNode;
-            }
-        }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        internal sealed class Node
         {
-            return GetEnumerator();
+            public Node(char data)
+            {
+                Data = data;
+            }
+
+            public char Data { get; }
+            public Node? NextNode { get; set; }
         }
     }
 }

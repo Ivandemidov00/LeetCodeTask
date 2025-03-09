@@ -1,4 +1,5 @@
 using System.Collections;
+
 using NUnit.Framework;
 
 namespace LongestSubstringWithoutRepeatingCharacters_3_Solution;
@@ -16,9 +17,8 @@ public static class TestData
             yield return new TestCaseData("au").Returns(2);
             yield return new TestCaseData("au").Returns(2);
             yield return new TestCaseData("ohomm").Returns(3);
-            yield return new TestCaseData("89!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ aabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRST").Returns(46);
-
-
+            yield return new TestCaseData(
+                "89!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~ aabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRST").Returns(46);
         }
     }
 }

@@ -8,12 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\LongestSubstringWithoutRepeatingCharacters_3_Solution\LongestSubstringWithoutRepeatingCharacters_3_Solution.csproj" />
-      <ProjectReference Include="..\SolutionHelper\SolutionHelper.csproj" />
+        <ProjectReference Include="..\LongestSubstringWithoutRepeatingCharacters_3_Solution\LongestSubstringWithoutRepeatingCharacters_3_Solution.csproj"/>
+        <ProjectReference Include="..\SolutionHelper\SolutionHelper.csproj"/>
     </ItemGroup>
 
 </Project>

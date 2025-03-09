@@ -10,10 +10,13 @@ public class SolutionOne : ISolution<string, string>
     public string Resolve(string parameters)
     {
         if (parameters.Length == 0)
+        {
             return string.Empty;
-        var inputArray = parameters.ToCharArray();
-        var outputList  = new List<char>();
-        for (var i = 0; i < inputArray.Length; i++)
+        }
+
+        char[]? inputArray = parameters.ToCharArray();
+        List<char>? outputList = new();
+        for (int i = 0; i < inputArray.Length; i++)
         {
             if (inputArray[i] == Open)
             {
@@ -30,7 +33,7 @@ public class SolutionOne : ISolution<string, string>
 
         static int FindClose(int iterator, IReadOnlyList<char> inputAnswer, IList<char> outputList)
         {
-            if (inputAnswer[iterator-1] == Open && inputAnswer[iterator] == Close)
+            if (inputAnswer[iterator - 1] == Open && inputAnswer[iterator] == Close)
             {
                 outputList.Add('o');
                 return iterator;
@@ -40,11 +43,10 @@ public class SolutionOne : ISolution<string, string>
             {
                 return iterator;
             }
+
             outputList.Add(inputAnswer[iterator]);
             iterator++;
             return FindClose(iterator, inputAnswer, outputList);
         }
-
     }
-    
 }

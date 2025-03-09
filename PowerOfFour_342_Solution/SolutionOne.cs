@@ -1,6 +1,5 @@
-﻿using System.Numerics;
+﻿using SolutionHelper;
 
-using SolutionHelper;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace PowerOfFour_342_Solution;
@@ -8,14 +7,18 @@ namespace PowerOfFour_342_Solution;
 public class SolutionOne : ISolution<int, bool>
 {
     public bool Resolve(int parameters)
-        => IsPowerOfFour(parameters);
-    
+    {
+        return IsPowerOfFour(parameters);
+    }
+
     public bool IsPowerOfFour(int n)
     {
         if (n == 1)
+        {
             return true;
+        }
 
-        var sum = 4;
+        int sum = 4;
 
         while (sum <= n)
         {
@@ -23,6 +26,7 @@ public class SolutionOne : ISolution<int, bool>
             {
                 return true;
             }
+
             sum *= 4;
         }
 

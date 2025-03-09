@@ -5,23 +5,26 @@ namespace DetermineIfTwoEventsHaveConflict_2446_Solution;
 public class SolutionOne : ISolution<Parameters, bool>
 {
     public bool Resolve(Parameters parameters)
-        => HaveConflict(parameters.event1, parameters.event2);
-    
+    {
+        return HaveConflict(parameters.event1, parameters.event2);
+    }
+
     // ReSharper disable once MemberCanBePrivate.Global
     public bool HaveConflict(string[] event1, string[] event2)
     {
-        var firstFirstTime = event1[0].Split(":");
-        var firstSecondTime = event1[1].Split(":");
-        var secondFirstTime = event2[0].Split(":");
-        var secondSecondTime = event2[1].Split(":");
-        return GetTime(firstFirstTime[0]) * 60 + GetTime(firstFirstTime[1]) <=
-               GetTime(secondSecondTime[0]) * 60 + GetTime(secondSecondTime[1]) &&
-               GetTime(secondFirstTime[0]) * 60 + GetTime(secondFirstTime[1]) <=
-               GetTime(firstSecondTime[0]) * 60 + GetTime(firstSecondTime[1]);
+        string[]? firstFirstTime = event1[0].Split(":");
+        string[]? firstSecondTime = event1[1].Split(":");
+        string[]? secondFirstTime = event2[0].Split(":");
+        string[]? secondSecondTime = event2[1].Split(":");
+        return (GetTime(firstFirstTime[0]) * 60) + GetTime(firstFirstTime[1]) <=
+               (GetTime(secondSecondTime[0]) * 60) + GetTime(secondSecondTime[1]) &&
+               (GetTime(secondFirstTime[0]) * 60) + GetTime(secondFirstTime[1]) <=
+               (GetTime(firstSecondTime[0]) * 60) + GetTime(firstSecondTime[1]);
     }
 
     private static int GetTime(string time)
-        => time switch
+    {
+        return time switch
         {
             "01" => 1,
             "02" => 2,
@@ -84,4 +87,5 @@ public class SolutionOne : ISolution<Parameters, bool>
             "59" => 59,
             _ => 0
         };
+    }
 }

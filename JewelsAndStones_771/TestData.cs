@@ -16,5 +16,4 @@ public static class TestData
             yield return new TestCaseData(new Parameters("z", "ZZ")).Returns(0);
         }
     }
-
 }

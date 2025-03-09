@@ -1,4 +1,5 @@
 using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace PascalTriangle_118_Solution;
@@ -6,15 +7,17 @@ namespace PascalTriangle_118_Solution;
 public class SolutionOne : ISolution<int, IList<IList<int>>>
 {
     public IList<IList<int>> Resolve(int parameters)
-        => Generate(parameters);
-    
+    {
+        return Generate(parameters);
+    }
+
     public IList<IList<int>> Generate(int numRows)
     {
-        var items = new List<IList<int>> { new List<int> { 1 } };
+        List<IList<int>>? items = new() { new List<int> { 1 } };
 
         while (items.Count != numRows)
         {
-            var item = GetItem(items[^1]);
+            IList<int> item = GetItem(items[^1]);
             items.Add(item);
         }
 
@@ -22,14 +25,14 @@ public class SolutionOne : ISolution<int, IList<IList<int>>>
 
         IList<int> GetItem(IList<int> beforeItem)
         {
-            var item = new List<int> { 1 };
-            for (int i = 0; i <= beforeItem.Count-2; i++)
+            List<int> item = new() { 1 };
+            for (int i = 0; i <= beforeItem.Count - 2; i++)
             {
-                item.Add(beforeItem[i] + beforeItem[i+1]);
+                item.Add(beforeItem[i] + beforeItem[i + 1]);
             }
+
             item.Add(1);
             return item;
         }
     }
-    
 }

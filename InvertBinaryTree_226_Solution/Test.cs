@@ -6,15 +6,17 @@ namespace InvertBinaryTree_226_Solution;
 
 public class Test
 {
-    [OneTimeSetUp] 
+    private ISolution<TreeNode, TreeNode> _solutionOne = null!;
+
+    [OneTimeSetUp]
     public void OneTimeSetUp()
-    { 
+    {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<TreeNode, TreeNode> _solutionOne = null!;
-
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
     public TreeNode SolutionOneTest(TreeNode num)
-        => _solutionOne.Resolve(num);
+    {
+        return _solutionOne.Resolve(num);
+    }
 }

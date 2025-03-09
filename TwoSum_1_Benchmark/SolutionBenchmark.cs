@@ -13,23 +13,11 @@ public class SolutionBenchmark
     {
         _solutionOne.TwoSum(nums, target);
     }
-    
+
     public IEnumerable<object[]> Data()
     {
-        yield return new object[]
-        {
-            new[] { 2, 7, 11, 15 },
-            9,
-        };
-        yield return new object[]
-        {
-            new[] { 3, 2, 4 },
-            6,
-        };
-        yield return new object[]
-        {
-            new[] { -8, -7, 11, 15 },
-            -15,
-        };
+        yield return new object[] { new[] { 2, 7, 11, 15 }, 9 };
+        yield return new object[] { new[] { 3, 2, 4 }, 6 };
+        yield return new object[] { new[] { -8, -7, 11, 15 }, -15 };
     }
 }

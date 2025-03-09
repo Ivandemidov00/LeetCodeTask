@@ -1,4 +1,5 @@
 ﻿using SolutionHelper;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace LongestIncreasingSubsequence_300_Solution;
@@ -6,15 +7,17 @@ namespace LongestIncreasingSubsequence_300_Solution;
 public class SolutionOne : ISolution<Parameters, int>
 {
     public int Resolve(Parameters parameters)
-        => LengthOfLIS(parameters.Nums);
+    {
+        return LengthOfLIS(parameters.Nums);
+    }
 
     public int LengthOfLIS(int[] nums)
     {
-        var maxLIS = 0;
-        var lengthCurrentSubSequence = 1;
-        var minNumberInSubSequence = nums[0];
-        var maxNumberInCurrentSubSequence = nums[0];
-        foreach (var num in nums)
+        int maxLIS = 0;
+        int lengthCurrentSubSequence = 1;
+        int minNumberInSubSequence = nums[0];
+        int maxNumberInCurrentSubSequence = nums[0];
+        foreach (int num in nums)
         {
             if (num > minNumberInSubSequence)
             {
@@ -29,6 +32,7 @@ public class SolutionOne : ISolution<Parameters, int>
                 lengthCurrentSubSequence = 0;
             }
         }
+
         return maxLIS;
     }
 }

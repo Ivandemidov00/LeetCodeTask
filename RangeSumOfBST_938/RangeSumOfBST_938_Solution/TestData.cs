@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Reflection.Metadata;
 
 using NUnit.Framework;
 
@@ -13,7 +12,9 @@ public static class TestData
     {
         get
         {
-            yield return new TestCaseData(new Parameters(new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)), new TreeNode(15, right: new TreeNode(18))), 7, 15)).Returns(32);
+            yield return new TestCaseData(new Parameters(
+                new TreeNode(10, new TreeNode(5, new TreeNode(3), new TreeNode(7)),
+                    new TreeNode(15, right: new TreeNode(18))), 7, 15)).Returns(32);
         }
     }
 }

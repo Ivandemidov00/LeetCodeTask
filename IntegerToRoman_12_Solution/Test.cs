@@ -6,15 +6,17 @@ namespace IntegerToRoman_12_Solution;
 
 public class Test
 {
+    private ISolution<int, string> _solutionOne = null!;
+
     [OneTimeSetUp]
     public void OneTimeSetUp()
     {
         _solutionOne = new SolutionOne();
     }
 
-    private ISolution<int, string> _solutionOne = null!;
-
     [TestCaseSource(typeof(TestData), nameof(TestData.Cases))]
     public string SolutionOneTest(int num)
-        => _solutionOne.Resolve(num);
+    {
+        return _solutionOne.Resolve(num);
+    }
 }

@@ -2,9 +2,9 @@ namespace SolutionHelper;
 
 public class TreeNode
 {
-    public int val;
     public TreeNode? left;
     public TreeNode? right;
+    public int val;
 
     public TreeNode(int val = 0, TreeNode left = null, TreeNode right = null)
     {
@@ -15,8 +15,11 @@ public class TreeNode
 
     public override bool Equals(object? obj)
     {
-        if(obj is TreeNode treeNode)
+        if (obj is TreeNode treeNode)
+        {
             return val == treeNode.val;
+        }
+
         return base.Equals(obj);
     }
 }

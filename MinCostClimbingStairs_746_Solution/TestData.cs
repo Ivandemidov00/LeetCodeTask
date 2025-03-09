@@ -10,7 +10,7 @@ public static class TestData
     {
         get
         {
-            yield return new TestCaseData(new []{ 10, 15, 20 }).Returns(15);
+            yield return new TestCaseData(new[] { 10, 15, 20 }).Returns(15);
         }
     }
 }

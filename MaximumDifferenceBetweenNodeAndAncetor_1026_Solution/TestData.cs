@@ -13,7 +13,8 @@ public class TestData
         get
         {
             yield return new TestCaseData(new TreeNode(1, new TreeNode(2))).Returns(1);
-            yield return new TestCaseData(new TreeNode(1, right: new TreeNode(2, right: new TreeNode(0, left: new TreeNode(3))) )).Returns(3);
+            yield return new TestCaseData(new TreeNode(1,
+                right: new TreeNode(2, right: new TreeNode(0, new TreeNode(3))))).Returns(3);
         }
     }
 }

@@ -8,11 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="BenchmarkDotNet" Version="0.13.2" />
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\FinalValueOfVariableAfterPerformingOperations_2011_Solution\FinalValueOfVariableAfterPerformingOperations_2011_Solution.csproj" />
+        <ProjectReference Include="..\FinalValueOfVariableAfterPerformingOperations_2011_Solution\FinalValueOfVariableAfterPerformingOperations_2011_Solution.csproj"/>
     </ItemGroup>
 
 </Project>
