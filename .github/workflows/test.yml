@@ -27,9 +27,7 @@ jobs:
       - name: Run tests in all projects with Microsoft.NET.Test.Sdk
         run: |
           echo "Finding test projects..."
-          find . -name "*.csproj" | while read proj; do
-            if grep -q "Microsoft.NET.Test.Sdk" "$proj"; then
-              echo "🧪 Running tests in $proj"
-              dotnet test "$proj" --no-build --verbosity normal
-            fi
+          for proj in $(find . -name "LeetCode.*_Solution.csproj"); do
+            echo "🧪 Running tests in $proj"
+            dotnet test "$proj" --collect:"XPlat Code Coverage" ...
           done
