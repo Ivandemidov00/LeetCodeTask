@@ -9,6 +9,7 @@ public class SolutionOne : ISolution<Parameter, int[][]>
     private static readonly ValueTuple<sbyte, sbyte> Three = (0, 1);
     private static readonly ValueTuple<sbyte, sbyte> Four = (-1, 0);
 
+
     public int[][] Resolve(Parameter parameters)
     {
         return FloodFill(parameters.Image, parameters.Sc, parameters.Sc, parameters.Color);
