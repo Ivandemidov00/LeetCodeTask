@@ -27,7 +27,7 @@ jobs:
       - name: Run tests in all projects with Microsoft.NET.Test.Sdk
         run: |
           echo "Finding test projects..."
-          for proj in $(find . -name "LeetCode.*_Solution.csproj"); do
-            echo "🧪 Running tests in $proj"
-            dotnet test "$proj" --collect:"XPlat Code Coverage" ...
-          done
+            for proj in $(find . -name "*_Solution.csproj"); do
+              echo "🧪 Running tests in $proj"
+              dotnet test "$proj" --collect:"XPlat Code Coverage" ...
+            done
