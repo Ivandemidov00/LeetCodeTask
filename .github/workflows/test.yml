@@ -1,0 +1,35 @@
+﻿name: Run LeetCode Tests
+
+on:
+  push:
+    paths:
+      - '**/*.cs'
+      - '**/*.csproj'
+      - '**/*.sln'
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Run tests in all projects with Microsoft.NET.Test.Sdk
+        run: |
+          echo "Finding test projects..."
+          find . -name "*.csproj" | while read proj; do
+            if grep -q "Microsoft.NET.Test.Sdk" "$proj"; then
+              echo "🧪 Running tests in $proj"
+              dotnet test "$proj" --no-build --verbosity normal
+            fi
+          done
