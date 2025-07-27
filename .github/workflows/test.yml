@@ -31,3 +31,32 @@ jobs:
               echo "🧪 Running tests in $proj"
               dotnet test "$proj" --collect:"XPlat Code Coverage" ...
             done
+      - name: Update README with solved problems
+        run: |
+          echo "📄 Generating list of solved problems..."
+
+          echo "# Solved LeetCode Problems" > README.md
+          echo "" >> README.md
+
+          find . -name "*_Solution.csproj" | sort | while read proj; do
+            # Извлечь имя задачи из пути
+            task=$(basename "$proj" .csproj | sed 's/_Solution$//')
+            echo "- $task" >> README.md
+          done
+
+          echo "" >> README.md
+          echo "✅ Updated on $(date -u)" >> README.md
+
+      - name: Commit README if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          if [[ -n "$(git status --porcelain README.md)" ]]; then
+            git add README.md
+            git commit -m "📘 Update solved problems list"
+            git push
+          else
+            echo "📄 No changes to commit."
+          fi
+
