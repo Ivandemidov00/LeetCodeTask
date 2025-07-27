@@ -1,4 +1,4 @@
-﻿name: Run LeetCode Tests
+﻿name: Запуск тестов LeetCode
 
 on:
   push:
@@ -13,50 +13,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Клонирование репозитория
         uses: actions/checkout@v4
 
-      - name: Setup .NET
+      - name: Настройка .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '6.0.x'
 
-      - name: Restore dependencies
+      - name: Восстановление зависимостей
         run: dotnet restore
 
-      - name: Run tests in all projects with Microsoft.NET.Test.Sdk
+      - name: Запуск тестов во всех проектах с Microsoft.NET.Test.Sdk
         run: |
-          echo "Finding test projects..."
-            for proj in $(find . -name "*_Solution.csproj"); do
-              echo "🧪 Running tests in $proj"
-              dotnet test "$proj" --collect:"XPlat Code Coverage" ...
-            done
-      - name: Update README with solved problems
-        run: |
-          echo "📄 Generating list of solved problems..."
+          echo "Поиск тестовых проектов..."
+          for proj in $(find . -name "*_Solution.csproj"); do
+            echo "🧪 Запуск тестов в $proj"
+            dotnet test "$proj" --no-restore --collect:"XPlat Code Coverage"
+          done
 
-          echo "# Solved LeetCode Problems" > README.md
+      - name: Обновление README списком решенных задач
+        run: |
+          echo "📄 Генерация списка решенных задач..."
+          echo "# Решенные задачи LeetCode" > README.md
           echo "" >> README.md
-
           find . -name "*_Solution.csproj" | sort | while read proj; do
-            # Извлечь имя задачи из пути
+            # Извлечение имени задачи из пути
             task=$(basename "$proj" .csproj | sed 's/_Solution$//')
             echo "- $task" >> README.md
           done
-
           echo "" >> README.md
-          echo "✅ Updated on $(date -u)" >> README.md
+          echo "✅ Обновлено $(date -u)" >> README.md
 
-      - name: Commit README if changed
+      - name: Коммит README при наличии изменений
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-
           if [[ -n "$(git status --porcelain README.md)" ]]; then
             git add README.md
-            git commit -m "📘 Update solved problems list"
+            git commit -m "📘 Обновление списка решенных задач"
             git push
           else
-            echo "📄 No changes to commit."
+            echo "📄 Нет изменений для коммита."
           fi
-
